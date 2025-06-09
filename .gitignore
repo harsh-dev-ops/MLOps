@@ -1,2 +1,3 @@
 *.env
 RAG/pinecone/secrets
+.DS_Store
