@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:15-alpine3.19
+    container_name: postgres_sink
+    env_file:
+      - ".env"
+    ports:
+      - "5431:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - airflow_network
+
+networks:
+  airflow_network:
+    external: false
+
+volumes:
+  postgres_data:
