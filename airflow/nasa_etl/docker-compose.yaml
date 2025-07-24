@@ -1,7 +1,6 @@
 services:
   postgres:
     image: postgres:15-alpine3.19
-    container_name: postgres_sink
     env_file:
       - ".env"
     ports:
